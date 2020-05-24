@@ -1,4 +1,4 @@
-# WaveApp
+# PHP WaveApp Client
 
 Simple PHP client for [WaveApp][wave-app]
 
@@ -9,13 +9,11 @@ The original documentation is available at:
 To use WaveApp, you will need to [register][wave-create-an-app] on the developer portal.
 
 ## Requirement & Install
-Open you composer.json file and add
+- Open terminal 
+- cd /path-to-project
+- and run
 ```
-"bhaktaraz/waveapp":"v1.0"
-```
-and go to the location of your composer file in terminal and run
-```
-composer update
+composer require bhaktaraz/php-waveapp-client
 ```
 
 ### Queries
