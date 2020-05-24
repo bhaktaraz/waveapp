@@ -1,0 +1,25 @@
+{
+  "name": "bhaktaraz/php-waveapp-client",
+  "type": "library",
+  "description": "PHP client for wave app",
+  "keywords": ["waveapp","accounting", "waveapp-php-client"],
+  "homepage": "https://github.com/bhaktaraz/waveapp",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bhaktaraz Bhatta",
+      "email": "bhattabhakta@gmail.com",
+      "homepage": "http://bhaktaraz.com.np",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Bhaktaraz\\WaveApp\\": "src/"
+    }
+  },
+  "require": {
+    "guzzlehttp/guzzle": "~6.0"
+  }
+}
