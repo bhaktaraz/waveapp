@@ -110,7 +110,10 @@ $customer = [
 $newCustomer = $waveapp->customerCreate($customer, "CustomerCreateInput");
 ```
 
+**Note:** Inspired from [subbe/waveapp][subbe-waveapp] which is created for laravel apps. For my need I've created this generalized repo and can be used in any PHP applications.
+
 [wave-app]: https://www.waveapps.com/
 [wave-documentation-url]: https://developer.waveapps.com/hc/en-us/categories/360001114072
 [wave-api-schema]: https://developer.waveapps.com/hc/en-us/articles/360019968212-API-Reference
 [wave-create-an-app]: https://developer.waveapps.com/hc/en-us/sections/360003012132-Create-an-App
+[subbe-waveapp]:https://github.com/subbe/waveapp

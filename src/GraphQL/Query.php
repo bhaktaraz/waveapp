@@ -65,4 +65,16 @@ GQL;
 query { accountSubtypes { name value type { name normalBalanceType value } } }
 GQL;
     }
+
+    public static function invoices() {
+        return <<<GQL
+query(\$businessId: ID!, \$page: Int!, \$pageSize: Int!) { business(id: \$businessId) {id isClassicInvoicing invoices(page: \$page, pageSize: \$pageSize) { pageInfo { currentPage totalPages totalCount } edges { node { id createdAt modifiedAt pdfUrl viewUrl status title subhead invoiceNumber invoiceDate poNumber customer { id name } currency { code } dueDate amountDue { value currency {symbol } } amountPaid { value currency { symbol } } total { value currency { symbol } } footer memo itemTitle unitTitle priceTitle amountTitle items { product { id name } description quantity price subtotal { value currency { symbol } } total { value currency {symbol } } } lastSentAt lastSentVia lastViewedAt } } } } }
+GQL;
+    }
+
+    public static function invoicesByCustomer() {
+        return <<<GQL
+query(\$businessId: ID!, \$page: Int!, \$pageSize: Int!, \$customerId: ID!) { business(id: \$businessId) {id isClassicInvoicing invoices(page: \$page, pageSize: \$pageSize, customerId: \$customerId) { pageInfo { currentPage totalPages totalCount } edges { node { id createdAt modifiedAt pdfUrl viewUrl status title subhead invoiceNumber invoiceDate poNumber customer { id name } currency { code } dueDate amountDue { value currency {symbol } } amountPaid { value currency { symbol } } total { value currency { symbol } } footer memo itemTitle unitTitle priceTitle amountTitle items { product { id name } description quantity price subtotal { value currency { symbol } } total { value currency {symbol } } } lastSentAt lastSentVia lastViewedAt } } } } }
+GQL;
+    }
 }
